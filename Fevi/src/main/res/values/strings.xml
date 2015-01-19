@@ -4,5 +4,22 @@
     <string name="app_name">Fevi</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+
+    <string-array name="menu_array">
+        <item>Trend</item>
+        <item>Pet</item>
+        <item>Music</item>
+        <item>Sports</item>
+        <item>Game</item>
+    </string-array>
+
+    <string name="title_activity_movie">MovieActivity</string>
+    <string name="title_activity_full_video">FullVideoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_full_screen_video">FullScreenVideoActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 </resources>
