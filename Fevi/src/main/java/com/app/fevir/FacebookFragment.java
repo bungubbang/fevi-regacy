@@ -31,7 +31,7 @@ import java.util.concurrent.ExecutionException;
 public class FacebookFragment extends Fragment {
 
     public static final String ARG_MENU_NUMBER = "menu_number";
-    public static final String API_URL = "http://fe-vi.com/api/card?category=";
+    public static final String API_URL = "http://munsangdong.cafe24.com/api/card?category=";
 
     private int currentPage = 0;
     FaAdapter faAdapter;
