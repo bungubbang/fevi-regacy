@@ -27,11 +27,6 @@ public class MovieActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        WindowManager.LayoutParams lpWindow = new WindowManager.LayoutParams();
-        lpWindow.flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND;
-        lpWindow.dimAmount = 0.7f;
-        getWindow().setAttributes(lpWindow);
-
         setContentView(R.layout.activity_movie);
 
         Intent intent = getIntent();
