@@ -45,7 +45,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="정성용"
+                android:text="made by bungubbang"
                 android:textColor="#F3FFE2"
                 android:textSize="10sp"
                 android:id="@+id/left_name"
@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sungyong.jung@sk.com"
+                android:text="bungubbang57@gmail.com"
                 android:textColor="#F3FFE2"
                 android:textSize="10sp"
                 android:layout_marginLeft="20dp"
