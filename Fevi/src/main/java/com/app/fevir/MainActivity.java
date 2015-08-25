@@ -1,6 +1,7 @@
 package com.app.fevir;
 
 
+import android.app.Application;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -19,9 +20,13 @@ import android.widget.ListView;
 
 import com.app.fevir.adapter.MenuListAdapter;
 import com.app.fevir.adapter.dto.MenuList;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Logger;
+import com.google.android.gms.analytics.Tracker;
 import com.google.common.collect.Lists;
 
 import java.util.List;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -36,6 +41,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // TODO
+        // Make sure that Analytics tracking has started
+//        ((MyApplication) getApplication()).startTracking();
+
 
         mTitle = getResources().getString(R.string.app_name);
 

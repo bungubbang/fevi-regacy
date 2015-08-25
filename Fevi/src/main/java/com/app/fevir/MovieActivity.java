@@ -1,6 +1,7 @@
 package com.app.fevir;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -18,6 +19,7 @@ import android.widget.VideoView;
 
 import com.app.fevir.support.CircleTransform;
 import com.app.fevir.support.ContextString;
+import com.google.android.gms.analytics.Tracker;
 import com.squareup.picasso.Picasso;
 
 
@@ -28,6 +30,14 @@ public class MovieActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_movie);
+        // TODO
+        // Make sure that Analytics tracking has started
+        // Get the tracker
+        Tracker tracker = ((MyApplication) getApplication()).getTracker();
+
+        // Set screen name
+        tracker.setScreenName("VideoView");
+
 
         Intent intent = getIntent();
         String cardName = intent.getStringExtra(ContextString.cardName);

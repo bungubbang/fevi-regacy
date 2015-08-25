@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Fevi/Fevi.iml" filepath="$PROJECT_DIR$/Fevi/Fevi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fevi-regacy.iml" filepath="$PROJECT_DIR$/fevi-regacy.iml" />
+    </modules>
+  </component>
+</project>

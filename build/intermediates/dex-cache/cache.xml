@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-eea68f154e3847505ea835dd1ba3c3248340f660.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-3f62c6ad882b4c48ae2e8189c6ad7af2b5741245.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-7440a2c94101835436dfe0e16292912fafaa2795.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/libs/gcm.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a6d7bce795a14c7f86111756c4ceb44b79de14aa">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/gcm-c1e688fc53dddd320b39105e7ed0e88fc46349fa.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-10187ba3262b68aa500b29d41b66d5c01651f998.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-ccfa82ac71b3c751ad18ec669106f85b22060a56.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-60306e797bf159452c4d7250ed679d3d3d85037c.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-9d2e36ff93fdee5fedec0c2bb1d2b81259eaa351.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-6fd6e52278e08348062f205b5e50ba8de20bd9a1.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-b057d25d8f9e8ab81eabe112c50c9fe295e5ff53.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-fd33a7cdb68eafe8c772fef69596a015461b660d.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-239909e3121fd89d5d6cf1bdf30f14275a980e98.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-936e89035ab5f62b7e2ab3f96dff6e9e33f55157.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-89cdef6f14ba7bb7c8263873aa7c5da9edf54d78.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-923282a90054135149fcd81786bf29629f3547cf.jar" />
+    </item>
+    <item
+        jar="/Users/dusskapark/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/guava-18.0-50b3205cd8536da8c25baca65b7086a11c1fe93d.jar" />
+    </item>
+    <item
+        jar="/Users/dusskapark/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-5113a93de204ae769ef5f7ec61b351a0e199ca6d.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-1daac7781f5ddc2759de1fdbd70752b1aba5ff4f.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-3f93ff896c10a17acdeb1bb8a9aa5154cf4eadc6.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-6bd8739d1a1f9fe4316bd13bb686ab55ed28a520.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-994079e70a78bf434b6c77aa9bd85b655a6406dd.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-e778299760990204c77e3b559c9c4b9240348040.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-766c9a294361666cf598d145dfad03bbbfccd58c.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-8428bf2a9b4faf696b1d7068807f05d874f0c494.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-fdc6fdfc2bfda135b893d34cae53b7ba56cb9e7a.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-c49dcd6025113de99a38ae9b457dda4f9f11da6a.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-ddc7529a20ddfc8fd3fb40b67f2b333a9a5dce89.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-336fe310b2fedac502bb8316b7e55321e846b281.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-da820714592d575a9923b05bdfcce06bbcc84b55.jar" />
+    </item>
+    <item
+        jar="/Users/dusskapark/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/picasso-2.4.0-e6ee44914b0af8461d9420358179a95ba896ceb9.jar" />
+    </item>
+    <item
+        jar="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/Volumes/ExFAT/workspace/fevi-regacy/Fevi/build/intermediates/pre-dexed/debug/classes-62370d1d5b8917426d62229407a8a4f190eacaf9.jar" />
+    </item>
+
+</items>
