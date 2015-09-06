@@ -2,10 +2,10 @@ package com.app.fevir.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,67 +17,78 @@ import com.app.fevir.support.CircleTransform;
 import com.app.fevir.support.ContextString;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by 1000742 on 15. 1. 5..
  */
-public class FaAdapter extends ArrayAdapter<Card> {
+public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder> {
 
     private Context context;
-    private List<Card> cards;
+    private List<Card> cardList;
 
-    public FaAdapter(Context context, int resource, List<Card> cards) {
-        super(context, resource, cards);
+    public FaAdapter(Context context) {
+        super();
         this.context = context;
-        this.cards = cards;
+        cardList = new ArrayList<>();
+    }
+
+    public void add(Card card) {
+        cardList.add(card);
+    }
+
+    public Card getItem(int position) {
+        return cardList.get(position);
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View v = convertView;
-        CardAdapterHolder adapterHolder = new CardAdapterHolder();
-        if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = inflater.inflate(R.layout.fragment_facebook, null);
-        }
+    public CardAdapterHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(context).inflate(R.layout.fragment_facebook, parent, false);
+        CardAdapterHolder adapterHolder = new CardAdapterHolder(v);
 
-        Card card = cards.get(position);
         adapterHolder.name = (TextView) v.findViewById(R.id.fa_name);
         adapterHolder.description = (TextView) v.findViewById(R.id.fa_description);
         adapterHolder.profile = (ImageView) v.findViewById(R.id.fa_profile);
         adapterHolder.picture = (ImageView) v.findViewById(R.id.fa_picture);
         adapterHolder.time = (TextView) v.findViewById(R.id.fa_time);
+        adapterHolder.faList = (LinearLayout) v.findViewById(R.id.fa_list);
 
-        adapterHolder.name.setText(card.getName());
-        adapterHolder.description.setText(card.getDescription());
-        adapterHolder.time.setText(card.getUpdated_time());
 
-        Picasso.with(context).load(card.getProfile_image()).transform(new CircleTransform()).into(adapterHolder.profile);
-        Picasso.with(context).load(card.getPicture()).into(adapterHolder.picture);
-
-        LinearLayout faList = (LinearLayout) v.findViewById(R.id.fa_list);
-        faList.setOnClickListener(new DetailClickListener(card));
-        return v;
+        return adapterHolder;
     }
 
     @Override
-    public int getCount() {
-        return cards.size();
+    public void onBindViewHolder(CardAdapterHolder holder, int position) {
+
+        Card card = getItem(position);
+
+        holder.name.setText(card.getName());
+        holder.description.setText(card.getDescription());
+        holder.time.setText(card.getUpdated_time());
+
+        Picasso.with(context).load(card.getProfile_image()).transform(new CircleTransform()).into(holder.profile);
+        Picasso.with(context).load(card.getPicture()).into(holder.picture);
+
+        holder.faList.setOnClickListener(new DetailClickListener(card));
     }
 
     @Override
-    public Card getItem(int position) {
-        return cards.get(position);
+    public int getItemCount() {
+        return cardList.size();
     }
 
-
-    class CardAdapterHolder {
+    static class CardAdapterHolder extends RecyclerView.ViewHolder {
         TextView name;
         ImageView profile;
         ImageView picture;
         TextView description;
         TextView time;
+        LinearLayout faList;
+
+        public CardAdapterHolder(View itemView) {
+            super(itemView);
+        }
     }
 
     private class DetailClickListener implements TextView.OnClickListener {
