@@ -1,7 +1,6 @@
 package com.app.fevir;
 
 
-import android.app.Application;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -13,18 +12,15 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.app.fevir.adapter.MenuListAdapter;
 import com.app.fevir.adapter.dto.MenuList;
-import com.google.android.gms.analytics.GoogleAnalytics;
-import com.google.android.gms.analytics.Logger;
-import com.google.android.gms.analytics.Tracker;
-import com.google.common.collect.Lists;
+import com.app.fevir.movie.list.FacebookFragment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -56,12 +52,17 @@ public class MainActivity extends ActionBarActivity {
         leftDrawer = (LinearLayout) findViewById(R.id.left_drawer);
 
 
-        List<MenuList> menuLists = Lists.newArrayList(
-                new MenuList(getResources().getDrawable(R.drawable.appbar_star_invincible_color), menus[0]),
-                new MenuList(getResources().getDrawable(R.drawable.appbar_flag_bear_color), menus[1]),
-                new MenuList(getResources().getDrawable(R.drawable.appbar_hardware_headset_color), menus[2]),
-                new MenuList(getResources().getDrawable(R.drawable.appbar_bike_color), menus[3]),
-                new MenuList(getResources().getDrawable(R.drawable.appbar_controller_snes_color), menus[4]));
+        List<MenuList> menuLists = new ArrayList<>();
+        menuLists.add(new MenuList(getResources()
+                .getDrawable(R.drawable.appbar_star_invincible_color), menus[0]));
+        menuLists.add(new MenuList(getResources()
+                .getDrawable(R.drawable.appbar_flag_bear_color), menus[1]));
+        menuLists.add(new MenuList(getResources()
+                .getDrawable(R.drawable.appbar_hardware_headset_color), menus[2]));
+        menuLists.add(new MenuList(getResources()
+                .getDrawable(R.drawable.appbar_bike_color), menus[3]));
+        menuLists.add(new MenuList(getResources()
+                .getDrawable(R.drawable.appbar_controller_snes_color), menus[4]));
 
         MenuListAdapter menuListAdapter = new MenuListAdapter(this, R.layout.drawer_list_item, menuLists);
         // Set the adapter for the list view

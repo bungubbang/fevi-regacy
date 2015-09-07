@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.fevir.MovieActivity"
+            android:name=".movie.detail.MovieActivity"
             android:label="@string/title_activity_movie"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >

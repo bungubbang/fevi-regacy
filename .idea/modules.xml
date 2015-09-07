@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Fevi/Fevi.iml" filepath="$PROJECT_DIR$/Fevi/Fevi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fevi-regacy.iml" filepath="$PROJECT_DIR$/fevi-regacy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fork.iml" filepath="$PROJECT_DIR$/fork.iml" />
     </modules>
   </component>
 </project>
