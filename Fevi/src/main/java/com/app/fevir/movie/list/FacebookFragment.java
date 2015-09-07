@@ -12,14 +12,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.fevir.R;
-import com.app.fevir.adapter.FaAdapter;
-import com.app.fevir.adapter.dto.Card;
-import com.app.fevir.http.MenuApi;
-import com.app.fevir.http.domain.CardInfo;
+import com.app.fevir.movie.list.adapter.FaAdapter;
+import com.app.fevir.movie.list.domain.Card;
+import com.app.fevir.network.api.Cards;
+import com.app.fevir.network.domain.CardInfo;
 
 import java.io.IOException;
 import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import retrofit.Call;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
@@ -39,6 +41,7 @@ public class FacebookFragment extends Fragment {
     String menu_title;
     private int currentPage = 0;
     private PublishSubject<Pair<String, Integer>> requestPublisher;
+    @Bind(R.id.lv_items) RecyclerView itemListView;
 
     public FacebookFragment() { }
 
@@ -54,7 +57,6 @@ public class FacebookFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        Log.d("INFO", "onActivityCreated");
         initRequestPublisher();
         requestPublisher.onNext(new Pair<>(menu_title, currentPage));
     }
@@ -70,7 +72,7 @@ public class FacebookFragment extends Fragment {
                             .baseUrl(API_URL)
                             .addConverterFactory(GsonConverterFactory.create())
                             .build()
-                            .create(MenuApi.class)
+                            .create(Cards.class)
                             .getCardInfo(requestInfo.first, requestInfo.second);
 
                     try {
@@ -99,8 +101,7 @@ public class FacebookFragment extends Fragment {
         int i = getArguments().getInt(ARG_MENU_NUMBER);
         menu_title = getResources().getStringArray(R.array.menu_array)[i];
 
-        RecyclerView itemListView = (RecyclerView) rootView.findViewById(R.id.lv_items);
-
+        ButterKnife.bind(this, rootView);
 
         faAdapter = new FaAdapter(getActivity());
         itemListView.setLayoutManager(new LinearLayoutManager(getActivity()));

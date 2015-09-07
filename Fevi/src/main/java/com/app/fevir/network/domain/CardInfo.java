@@ -1,6 +1,6 @@
-package com.app.fevir.http.domain;
+package com.app.fevir.network.domain;
 
-import com.app.fevir.adapter.dto.Card;
+import com.app.fevir.movie.list.domain.Card;
 
 import java.util.List;
 

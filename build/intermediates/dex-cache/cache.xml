@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/butterknife-7.0.1-135a1396f97f99ef04d8883c63b803e527b22eb0.jar" />
+    </item>
+    <item
         jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
         jumboMode="false"
         revision="23.0.1"

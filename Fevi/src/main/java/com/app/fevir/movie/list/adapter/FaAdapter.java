@@ -1,4 +1,4 @@
-package com.app.fevir.adapter;
+package com.app.fevir.movie.list.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,15 +10,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.app.fevir.MovieActivity;
 import com.app.fevir.R;
-import com.app.fevir.adapter.dto.Card;
-import com.app.fevir.support.CircleTransform;
-import com.app.fevir.support.ContextString;
+import com.app.fevir.movie.detail.MovieActivity;
+import com.app.fevir.movie.list.domain.Card;
+import com.app.fevir.util.picaso.CircleTransform;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by 1000742 on 15. 1. 5..
@@ -47,13 +49,7 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
         View v = LayoutInflater.from(context).inflate(R.layout.fragment_facebook, parent, false);
         CardAdapterHolder adapterHolder = new CardAdapterHolder(v);
 
-        adapterHolder.name = (TextView) v.findViewById(R.id.fa_name);
-        adapterHolder.description = (TextView) v.findViewById(R.id.fa_description);
-        adapterHolder.profile = (ImageView) v.findViewById(R.id.fa_profile);
-        adapterHolder.picture = (ImageView) v.findViewById(R.id.fa_picture);
-        adapterHolder.time = (TextView) v.findViewById(R.id.fa_time);
-        adapterHolder.faList = (LinearLayout) v.findViewById(R.id.fa_list);
-
+        ButterKnife.bind(adapterHolder, v);
 
         return adapterHolder;
     }
@@ -65,9 +61,9 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
 
         holder.name.setText(card.getName());
         holder.description.setText(card.getDescription());
-        holder.time.setText(card.getUpdated_time());
+        holder.time.setText(card.getUpdatedTime());
 
-        Picasso.with(context).load(card.getProfile_image()).transform(new CircleTransform()).into(holder.profile);
+        Picasso.with(context).load(card.getProfileImage()).transform(new CircleTransform()).into(holder.profile);
         Picasso.with(context).load(card.getPicture()).into(holder.picture);
 
         holder.faList.setOnClickListener(new DetailClickListener(card));
@@ -79,11 +75,17 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
     }
 
     static class CardAdapterHolder extends RecyclerView.ViewHolder {
+        @Bind(R.id.fa_name)
         TextView name;
+        @Bind(R.id.fa_profile)
         ImageView profile;
+        @Bind(R.id.fa_picture)
         ImageView picture;
+        @Bind(R.id.fa_description)
         TextView description;
+        @Bind(R.id.fa_time)
         TextView time;
+        @Bind(R.id.fa_list)
         LinearLayout faList;
 
         public CardAdapterHolder(View itemView) {
@@ -102,12 +104,12 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(v.getContext(), MovieActivity.class);
-            intent.putExtra(ContextString.cardProfile, card.getProfile_image());
-            intent.putExtra(ContextString.cardName, card.getName());
-            intent.putExtra(ContextString.cardTime, card.getUpdated_time());
-            intent.putExtra(ContextString.cardPicture, card.getPicture());
-            intent.putExtra(ContextString.cardDescription, card.getDescription());
-            intent.putExtra(ContextString.cardSource, card.getSource());
+            intent.putExtra(MovieActivity.CARD_PROFILE, card.getProfileImage());
+            intent.putExtra(MovieActivity.CARD_NAME, card.getName());
+            intent.putExtra(MovieActivity.CARD_TIME, card.getUpdatedTime());
+            intent.putExtra(MovieActivity.CARD_PICTURE, card.getPicture());
+            intent.putExtra(MovieActivity.CARD_DESCRIPTION, card.getDescription());
+            intent.putExtra(MovieActivity.CARD_SOURCE, card.getSource());
 
             v.getContext().startActivity(intent);
         }

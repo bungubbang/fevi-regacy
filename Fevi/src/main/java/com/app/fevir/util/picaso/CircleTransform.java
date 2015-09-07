@@ -1,4 +1,4 @@
-package com.app.fevir.support;
+package com.app.fevir.util.picaso;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
