@@ -18,7 +18,7 @@ import android.widget.ListView;
 
 import com.app.fevir.adapter.MenuListAdapter;
 import com.app.fevir.adapter.dto.MenuList;
-import com.app.fevir.movie.list.FacebookFragment;
+import com.app.fevir.movie.list.MovieListFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -140,7 +140,7 @@ public class MainActivity extends ActionBarActivity {
      */
     private void selectItem(int position) {
 
-        Fragment fragment = FacebookFragment.newInstance(position);
+        Fragment fragment = MovieListFragment.newInstance(position);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.content_frame, fragment);

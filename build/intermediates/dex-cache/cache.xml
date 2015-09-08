@@ -2,11 +2,116 @@
 <items version="2" >
 
     <item
-        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.5.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/butterknife-7.0.1-135a1396f97f99ef04d8883c63b803e527b22eb0.jar" />
+        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-43d569539c765959ed9c426eab48120ec83da712.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-9ee5adc55e9733897ecda47acf6e32753049e869.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-5155b9b26fe5741ff706aa7391e3a0e8ee7994e6.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-589270e527700e0f479de5b2eafa5bd993f736f1.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-f5761f162e1d9328f209e723f82324b1f1998a60.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d405025c600055237c171a0bbabaa49d69696573">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-70789928df42a296973f6b89dabaccd785cd9965.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-8bc58902d3c6ef54e0b9c8a263bcb7d2aa1599da.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/libs/gcm.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a6d7bce795a14c7f86111756c4ceb44b79de14aa">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/gcm-ac5ff763de1a45ace45e0d4238dcf89e51d30194.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-27f5d88001180d7658af4463fc3e412b37482301.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-32fea12f3da287a9ef7c62ea9a155c15baab4dfd.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.0.13/b8668706414b5936d38c8a9e4c2be16e3c999c62/rxjava-1.0.13.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b8668706414b5936d38c8a9e4c2be16e3c999c62">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/rxjava-1.0.13-2e68eff61c7509ec2752e472024fdab4ef507d86.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/2.0.0-beta1/53b5be42d6cf719ac1431b9aa9a4d5ab78856148/retrofit-2.0.0-beta1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="53b5be42d6cf719ac1431b9aa9a4d5ab78856148">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta1-5055d65354204999002a9c712a6612e7bc17259f.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-eeb9f7135247026646152d2fbf3b56cb6984fd1a.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-a96169a0ebeffa8fb153e14a87bc40ab075b75f9.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa81bfe8c5cc88c2472ca936ae71f0c3dd1766df">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-1c4fa6ee89a813b93098479250d660f28d5f3d43.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-246bcad4c6ee00e8b0efe754f040065d59d2460a.jar" />
     </item>
     <item
         jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
@@ -14,6 +119,167 @@
         revision="23.0.1"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
         <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/picasso-2.5.2-3d8d57b089d57e18e065a9c7db7c4d712594d1cd.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-618b066e06f6b603aa584567613e42cd2ed98168.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-ce1a78776e0002ef6b2832c3d91ee483e2983652.jar" />
+    </item>
+    <item
+        jar="/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-4a8e767e65c7ce1b37d0b7d0bd60954b8f2d4dab.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-09d84ada966c17be2b93974b9b8b24dd9474de68.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/okio-1.6.0-50d6f2064b56b2168a649799677dc836c9424bca.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-63934cd12545f85ba49fd9c3536e50b86764d383.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-b40cf1f1a6d6837ec5a59ca703a6ea6dff08a218.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger/2.0.1/1261dfca5bae89a866a2855552da26feab7f8fad/dagger-2.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1261dfca5bae89a866a2855552da26feab7f8fad">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/dagger-2.0.1-a40a6a0011f1c3c39eddb16e79310a37b2dfaaae.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/converter-gson/2.0.0-beta1/3de922cdbf9bb3a6f72f6b6b3327cfb348cf445a/converter-gson-2.0.0-beta1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3de922cdbf9bb3a6f72f6b6b3327cfb348cf445a">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta1-17d99d2bec92c57ffe3438ba09adaf63c8b4725a.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-cfae7a39442e6650d7dc9d3b1aeb8830ad57c446.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-0e8a39a80dbcfef5f21c8d5bd2cbc71f894e6e2c.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/javax.inject-1-ea52d4e5c7a481e2b62d66cb80fc2b21e42290ec.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-a7db8428b0491c35d2b0cf44fac1eb7557313840.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-5a2016eb939483943a79d241ae8d5565c4f1ad46.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.5.0/4de2b4ed3445c37ec1720a7d214712e845a24636/okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/okhttp-2.5.0-83b20dd655edba921f9b7b45416cb0bb8001b236.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-f140b78aaba20e46d7fda84a7a54662de172eb38.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-5b138ec897728bf4dbf243b50047db5a46ee3011.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/butterknife-7.0.1-135a1396f97f99ef04d8883c63b803e527b22eb0.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-788565e6c0035ab80ff4ae3b61cfed2ebff28734.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-e5082719635cd20aafd77a9454174a5aed58a84d.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/gson-2.3.1-e1903f18218d38b317233adfc6863b7cad2a56c8.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-31ce89c0a4503d9ce0398babd90cc5cc7b97d5dc.jar" />
+    </item>
+    <item
+        jar="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.5.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
+        <dex dex="/Users/jsuch2362/Documents/workspace_android/fevi-legacy/fork/Fevi/build/intermediates/pre-dexed/debug/classes-c0b11b627ecbe31bae7f4a550de000430ad5cdb6.jar" />
     </item>
 
 </items>
