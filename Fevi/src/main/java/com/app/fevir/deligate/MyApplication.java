@@ -1,22 +1,26 @@
-package com.app.fevir;
+package com.app.fevir.deligate;
 
 import android.app.Application;
 
+import com.app.fevir.R;
+import com.app.fevir.deligate.component.DaggerApplicationComponent;
+import com.app.fevir.deligate.module.ApplicationModule;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Logger;
 import com.google.android.gms.analytics.Tracker;
 
-//import android.util.Log;
-
-
 public class MyApplication extends Application {
-    public Tracker mTracker;
+    private Tracker mTracker;
 
     @Override
     public void onCreate() {
         super.onCreate();
         startTracking();
 
+        DaggerApplicationComponent.builder()
+                .applicationModule(new ApplicationModule(this))
+                .build()
+                .inject(this);
     }
 
     private void startTracking() {
