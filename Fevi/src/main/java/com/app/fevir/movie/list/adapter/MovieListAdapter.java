@@ -1,7 +1,6 @@
 package com.app.fevir.movie.list.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +10,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.app.fevir.R;
-import com.app.fevir.movie.detail.MovieActivity;
 import com.app.fevir.movie.list.domain.Card;
 import com.app.fevir.util.picaso.CircleTransform;
+import com.app.fevir.views.listener.RecyclerItemClickListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -25,12 +24,13 @@ import butterknife.ButterKnife;
 /**
  * Created by 1000742 on 15. 1. 5..
  */
-public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder> {
+public class MovieListAdapter extends RecyclerView.Adapter<MovieListAdapter.CardHolder> {
 
     private Context context;
     private List<Card> cardList;
+    private RecyclerItemClickListener recyclerItemClickListener;
 
-    public FaAdapter(Context context) {
+    public MovieListAdapter(Context context) {
         super();
         this.context = context;
         cardList = new ArrayList<>();
@@ -45,9 +45,9 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
     }
 
     @Override
-    public CardAdapterHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CardHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.fragment_facebook, parent, false);
-        CardAdapterHolder adapterHolder = new CardAdapterHolder(v);
+        CardHolder adapterHolder = new CardHolder(v);
 
         ButterKnife.bind(adapterHolder, v);
 
@@ -55,7 +55,7 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
     }
 
     @Override
-    public void onBindViewHolder(CardAdapterHolder holder, int position) {
+    public void onBindViewHolder(CardHolder holder, int position) {
 
         Card card = getItem(position);
 
@@ -66,7 +66,11 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
         Picasso.with(context).load(card.getProfileImage()).transform(new CircleTransform()).into(holder.profile);
         Picasso.with(context).load(card.getPicture()).into(holder.picture);
 
-        holder.faList.setOnClickListener(new DetailClickListener(card));
+        holder.faList.setOnClickListener(v -> {
+            if (recyclerItemClickListener != null) {
+                recyclerItemClickListener.onItemClick(MovieListAdapter.this, position);
+            }
+        });
     }
 
     @Override
@@ -74,7 +78,11 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
         return cardList.size();
     }
 
-    static class CardAdapterHolder extends RecyclerView.ViewHolder {
+    public void setRecyclerItemClickListener(RecyclerItemClickListener recyclerItemClickListener) {
+        this.recyclerItemClickListener = recyclerItemClickListener;
+    }
+
+    static class CardHolder extends RecyclerView.ViewHolder {
         @Bind(R.id.fa_name)
         TextView name;
         @Bind(R.id.fa_profile)
@@ -88,30 +96,9 @@ public class FaAdapter extends RecyclerView.Adapter<FaAdapter.CardAdapterHolder>
         @Bind(R.id.fa_list)
         LinearLayout faList;
 
-        public CardAdapterHolder(View itemView) {
+        public CardHolder(View itemView) {
             super(itemView);
         }
     }
 
-    private class DetailClickListener implements TextView.OnClickListener {
-
-        private Card card;
-
-        private DetailClickListener(Card card) {
-            this.card = card;
-        }
-
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(v.getContext(), MovieActivity.class);
-            intent.putExtra(MovieActivity.CARD_PROFILE, card.getProfileImage());
-            intent.putExtra(MovieActivity.CARD_NAME, card.getName());
-            intent.putExtra(MovieActivity.CARD_TIME, card.getUpdatedTime());
-            intent.putExtra(MovieActivity.CARD_PICTURE, card.getPicture());
-            intent.putExtra(MovieActivity.CARD_DESCRIPTION, card.getDescription());
-            intent.putExtra(MovieActivity.CARD_SOURCE, card.getSource());
-
-            v.getContext().startActivity(intent);
-        }
-    }
 }
