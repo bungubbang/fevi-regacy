@@ -38,11 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // TODO
-        // Make sure that Analytics tracking has started
-//        ((MyApplication) getApplication()).startTracking();
-
-
         mTitle = getResources().getString(R.string.app_name);
 
         String[] menus = getResources().getStringArray(R.array.menu_array);

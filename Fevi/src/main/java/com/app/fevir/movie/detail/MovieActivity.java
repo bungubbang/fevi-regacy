@@ -102,6 +102,12 @@ public class MovieActivity extends AppCompatActivity {
             videoView.setBackgroundColor(Color.TRANSPARENT);
         });
 
+        videoView.setOnCompletionListener(mp -> {
+            if (getResources().getConfiguration().orientation != Configuration.ORIENTATION_PORTRAIT) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            }
+        });
+
         setupActionbar();
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
