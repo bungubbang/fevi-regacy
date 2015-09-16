@@ -63,7 +63,6 @@
                     android:layout_above="@+id/left_mail"
                     android:layout_alignLeft="@+id/left_mail"
                     android:layout_alignStart="@+id/left_mail"
-                    android:text="정성용"
                     android:textColor="#F3FFE2"
                     android:textSize="10sp" />
 
@@ -74,7 +73,6 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="20dp"
-                    android:text="sungyong.jung@sk.com"
                     android:textColor="#F3FFE2"
                     android:textSize="10sp" />
 
