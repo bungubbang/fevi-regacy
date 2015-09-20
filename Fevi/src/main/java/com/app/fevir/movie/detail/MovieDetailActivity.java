@@ -12,6 +12,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,16 +21,22 @@ import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.app.fevir.R;
 import com.app.fevir.deligate.MyApplication;
+import com.app.fevir.movie.detail.di.DaggerMovieDetailComponent;
+import com.app.fevir.movie.detail.di.MovieDetailModule;
+import com.app.fevir.movie.detail.presenter.MovieDetailPresenter;
 import com.app.fevir.movie.list.domain.Card;
 import com.app.fevir.util.picaso.CircleTransform;
 import com.google.android.gms.analytics.Tracker;
 import com.squareup.picasso.Picasso;
 
 import java.util.concurrent.TimeUnit;
+
+import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -38,7 +45,7 @@ import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 
 
-public class MovieActivity extends AppCompatActivity {
+public class MovieDetailActivity extends AppCompatActivity implements MovieDetailPresenter.View {
 
     public static final String CARD_NAME = "CARD_NAME";
     public static final String CARD_TIME = "CARD_TIME";
@@ -46,6 +53,7 @@ public class MovieActivity extends AppCompatActivity {
     public static final String CARD_PICTURE = "CARD_PICTURE";
     public static final String CARD_DESCRIPTION = "CARD_DESCRIPTION";
     public static final String CARD_SOURCE = "CARD_SOURCE";
+    public static final String CARD_ID = "CARD_ID";
 
     @Bind(R.id.profile_layout)
     View vgTitle;
@@ -63,9 +71,9 @@ public class MovieActivity extends AppCompatActivity {
     VideoView videoView;
     @Bind(R.id.progressBar)
     ProgressBar progressBar;
-
+    @Inject
+    MovieDetailPresenter movieDetailPresenter;
     private Card card;
-
     private boolean landscape;
 
     @Override
@@ -75,12 +83,16 @@ public class MovieActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie);
         ButterKnife.bind(this);
 
+        DaggerMovieDetailComponent.builder()
+                .movieDetailModule(new MovieDetailModule(this))
+                .build()
+                .inject(this);
 
         Tracker tracker = ((MyApplication) getApplication()).getTracker();
         tracker.setScreenName("VideoView");
 
 
-        card = getCardFromIntent(getIntent());
+        card = movieDetailPresenter.getCardFromIntent(getIntent());
 
         tvName.setText(card.getName());
         tvTime.setText(card.getCreatedTime());
@@ -102,6 +114,12 @@ public class MovieActivity extends AppCompatActivity {
             videoView.setBackgroundColor(Color.TRANSPARENT);
         });
 
+        videoView.setOnErrorListener((mp1, what, extra) -> {
+            progressBar.setVisibility(View.GONE);
+            Toast.makeText(MovieDetailActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            return false;
+        });
+
         videoView.setOnCompletionListener(mp -> {
             if (getResources().getConfiguration().orientation != Configuration.ORIENTATION_PORTRAIT) {
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -113,6 +131,15 @@ public class MovieActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        menu.clear();
+        getMenuInflater().inflate(R.menu.menu_movie_detail, menu);
+        return true;
+    }
+
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -206,27 +233,13 @@ public class MovieActivity extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
+        } else if (item.getItemId() == R.id.action_share) {
+            movieDetailPresenter.onShare(card.getName(), card.getId());
+        } else if (item.getItemId() == R.id.action_open_web) {
+            movieDetailPresenter.onViewWeb(card.getId());
         }
+
         return super.onOptionsItemSelected(item);
-    }
-
-    private Card getCardFromIntent(Intent intent) {
-
-        String cardName = intent.getStringExtra(CARD_NAME);
-        String cardTime = intent.getStringExtra(CARD_TIME);
-        String cardProfile = intent.getStringExtra(CARD_PROFILE);
-        String cardPicture = intent.getStringExtra(CARD_PICTURE);
-        String cardDescription = intent.getStringExtra(CARD_DESCRIPTION);
-        String cardSource = intent.getStringExtra(CARD_SOURCE);
-
-        return new Card.Builder()
-                .name(cardName)
-                .createdTime(cardTime)
-                .profileImage(cardProfile)
-                .picture(cardPicture)
-                .description(cardDescription)
-                .source(cardSource)
-                .createCard();
     }
 
     @OnClick(R.id.fullscreen_icon)
@@ -241,4 +254,18 @@ public class MovieActivity extends AppCompatActivity {
         landscape = !landscape;
     }
 
+    @Override
+    public void sendFacebookLink(String shareMsg) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, shareMsg);
+        startActivity(Intent.createChooser(intent, getString(R.string.share)));
+    }
+
+    @Override
+    public void sendWeb(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        Intent chooser = Intent.createChooser(intent, getString(R.string.open_browser));
+        startActivity(chooser);
+    }
 }

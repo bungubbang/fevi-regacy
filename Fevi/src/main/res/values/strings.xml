@@ -21,5 +21,7 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_full_screen_video">FullScreenVideoActivity</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="share">Share</string>
+    <string name="open_browser">Open Browser</string>
 
 </resources>
