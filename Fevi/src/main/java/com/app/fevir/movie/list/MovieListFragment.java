@@ -11,35 +11,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.fevir.R;
-import com.app.fevir.movie.detail.MovieActivity;
+import com.app.fevir.movie.detail.MovieDetailActivity;
 import com.app.fevir.movie.list.adapter.MovieListAdapter;
 import com.app.fevir.movie.list.component.DaggerMovieListComponent;
 import com.app.fevir.movie.list.domain.Card;
 import com.app.fevir.movie.list.module.MovieListModule;
 import com.app.fevir.movie.list.presenter.MovieListPresenter;
-import com.app.fevir.network.api.Cards;
-import com.app.fevir.network.domain.CardInfo;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import retrofit.Call;
-import retrofit.GsonConverterFactory;
-import retrofit.Retrofit;
-import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
-import rx.subjects.PublishSubject;
 
 public class MovieListFragment extends Fragment implements MovieListPresenter.View {
 
     public static final String ARG_MENU_NUMBER = "menu_number";
-    public static final String API_URL = "http://munsangdong.cafe24.com";
     MovieListAdapter movieListAdapter;
     String menu_title;
 
@@ -47,8 +33,6 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
     RecyclerView itemListView;
     @Inject
     MovieListPresenter movieListPresenter;
-    private int requestPage = 0;
-    private PublishSubject<String> requestPublisher;
 
     public static Fragment newInstance(int position) {
         Fragment fragment = new MovieListFragment();
@@ -66,8 +50,6 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
                 .build()
                 .inject(this);
 
-        movieListPresenter.log();
-
     }
 
     @Override
@@ -81,13 +63,14 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
         movieListAdapter = new MovieListAdapter(getActivity());
         movieListAdapter.setRecyclerItemClickListener((adapter, position) -> {
             Card card = ((MovieListAdapter) adapter).getItem(position);
-            Intent intent = new Intent(getActivity(), MovieActivity.class);
-            intent.putExtra(MovieActivity.CARD_PROFILE, card.getProfileImage());
-            intent.putExtra(MovieActivity.CARD_NAME, card.getName());
-            intent.putExtra(MovieActivity.CARD_TIME, card.getUpdatedTime());
-            intent.putExtra(MovieActivity.CARD_PICTURE, card.getPicture());
-            intent.putExtra(MovieActivity.CARD_DESCRIPTION, card.getDescription());
-            intent.putExtra(MovieActivity.CARD_SOURCE, card.getSource());
+            Intent intent = new Intent(getActivity(), MovieDetailActivity.class);
+            intent.putExtra(MovieDetailActivity.CARD_PROFILE, card.getProfileImage());
+            intent.putExtra(MovieDetailActivity.CARD_NAME, card.getName());
+            intent.putExtra(MovieDetailActivity.CARD_TIME, card.getUpdatedTime());
+            intent.putExtra(MovieDetailActivity.CARD_PICTURE, card.getPicture());
+            intent.putExtra(MovieDetailActivity.CARD_DESCRIPTION, card.getDescription());
+            intent.putExtra(MovieDetailActivity.CARD_SOURCE, card.getSource());
+            intent.putExtra(MovieDetailActivity.CARD_ID, card.getId());
 
             startActivity(intent);
         });
@@ -95,43 +78,8 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
         itemListView.setAdapter(movieListAdapter);
         itemListView.addOnScrollListener(new EndlessScrollListener(5));
 
-        initRequestPublisher();
-        requestPublisher.onNext(menu_title);
+        movieListPresenter.onLoadInfo(menu_title);
     }
-
-    private void initRequestPublisher() {
-        requestPublisher = PublishSubject.create();
-        requestPublisher
-                .throttleWithTimeout(100, TimeUnit.MILLISECONDS)
-                .onBackpressureBuffer()
-                .observeOn(Schedulers.io())
-                .subscribe(menu_title -> {
-                    Call<CardInfo> cardInfoCall = new Retrofit.Builder()
-                            .baseUrl(API_URL)
-                            .addConverterFactory(GsonConverterFactory.create())
-                            .build()
-                            .create(Cards.class)
-                            .getCardInfo(menu_title, requestPage);
-
-                    try {
-                        List<Card> content = cardInfoCall.execute().body().getContent();
-                        Observable.from(content)
-                                .observeOn(AndroidSchedulers.mainThread())
-                                .subscribe(card -> {
-                                    movieListAdapter.add(card);
-                                    movieListAdapter.notifyDataSetChanged();
-                                }, Throwable::printStackTrace);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    // 다음 요청을 위해 미리 카운팅 하기
-                    requestPage++;
-
-                }, Throwable::printStackTrace);
-
-
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup
@@ -140,6 +88,12 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
         View rootView = inflater.inflate(R.layout.fadong_main, container, false);
         ButterKnife.bind(this, rootView);
         return rootView;
+    }
+
+    @Override
+    public void addCard(Card card) {
+        movieListAdapter.add(card);
+        movieListAdapter.notifyDataSetChanged();
     }
 
     public class EndlessScrollListener extends RecyclerView.OnScrollListener {
@@ -157,7 +111,7 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
             int itemCount = recyclerView.getAdapter().getItemCount();
 
             if (itemCount - lastVisibleItemPosition <= visibleThreshold) {
-                requestPublisher.onNext(menu_title);
+                movieListPresenter.onLoadInfo(menu_title);
             }
         }
 

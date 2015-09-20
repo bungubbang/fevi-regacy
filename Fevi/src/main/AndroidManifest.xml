@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".movie.detail.MovieActivity"
+            android:name=".movie.detail.MovieDetailActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_movie" />
 
@@ -64,10 +64,19 @@
         </receiver>
         <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
 
-        <!--<meta-data-->
-        <!--android:name="com.google.android.gms.analytics.globalConfigResource"-->
-        <!--android:resource="@xml/analytics_global_config" />-->
+        <activity android:name=".interfaces.web.OpenActivity">
 
+            <intent-filter>
+                <data
+                    android:host="vikicast.com"
+                    android:scheme="http" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+        </activity>
 
     </application>
 
