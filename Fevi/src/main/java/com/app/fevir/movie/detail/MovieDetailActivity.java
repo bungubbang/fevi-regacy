@@ -57,8 +57,6 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
 
     @Bind(R.id.profile_layout)
     View vgTitle;
-    @Bind(R.id.vg_description)
-    View vgDescription;
     @Bind(R.id.fa_name)
     TextView tvName;
     @Bind(R.id.fa_time)
@@ -163,7 +161,6 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             getSupportActionBar().hide();
             vgTitle.setVisibility(View.GONE);
-            vgDescription.setVisibility(View.GONE);
             setFullScreen();
             ViewGroup.LayoutParams layoutParams = videoView.getLayoutParams();
             layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -172,7 +169,6 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
         } else {
             getSupportActionBar().show();
             vgTitle.setVisibility(View.VISIBLE);
-            vgDescription.setVisibility(View.VISIBLE);
             setNormalScreen();
             ViewGroup.LayoutParams layoutParams = videoView.getLayoutParams();
             layoutParams.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200f, getResources().getDisplayMetrics());
@@ -255,7 +251,7 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
     }
 
     @Override
-    public void sendFacebookLink(String shareMsg) {
+    public void sendWebLink(String shareMsg) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, shareMsg);

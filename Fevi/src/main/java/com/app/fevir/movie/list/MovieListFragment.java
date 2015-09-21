@@ -76,7 +76,7 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
         });
         itemListView.setLayoutManager(new LinearLayoutManager(getActivity()));
         itemListView.setAdapter(movieListAdapter);
-        itemListView.addOnScrollListener(new EndlessScrollListener(5));
+        itemListView.addOnScrollListener(new EndlessScrollListener(5, () -> movieListPresenter.onLoadInfo(menu_title)));
 
         movieListPresenter.onLoadInfo(menu_title);
     }
@@ -96,26 +96,6 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
         movieListAdapter.notifyDataSetChanged();
     }
 
-    public class EndlessScrollListener extends RecyclerView.OnScrollListener {
-
-        private int visibleThreshold = 3;
-
-        public EndlessScrollListener(int visibleThreshold) {
-            this.visibleThreshold = visibleThreshold;
-        }
-
-        @Override
-        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-            LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-            int lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition();
-            int itemCount = recyclerView.getAdapter().getItemCount();
-
-            if (itemCount - lastVisibleItemPosition <= visibleThreshold) {
-                movieListPresenter.onLoadInfo(menu_title);
-            }
-        }
-
-    }
 }
 
 

@@ -36,7 +36,7 @@ public class OpenActivity extends AppCompatActivity implements OpenPresenter.Vie
 
         String lastPath = intent.getData().getFragment();
 
-        openPresenter.onInit(lastPath);
+        openPresenter.onInit(lastPath, this::showDetail);
 
     }
 
