@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.app.fevir"
-    android:versionCode="3"
-    android:versionName="1.0.2">
+    package="com.vikicast.app">
 
     <!-- Google Analytics required permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,10 +10,10 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
-        android:name=".deligate.MyApplication"
+        android:name="com.app.fevir.deligate.MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="Facebook Entertainment Videos"
+        android:icon="@drawable/icon_launcher"
+        android:label="Vikicast"
         android:theme="@style/CustomActionBarTheme">
 
         <activity
@@ -29,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".movie.detail.MovieDetailActivity"
+            android:name="com.app.fevir.movie.detail.MovieDetailActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_movie" />
 
@@ -64,7 +62,7 @@
         </receiver>
         <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
 
-        <activity android:name=".interfaces.web.OpenActivity">
+        <activity android:name="com.app.fevir.interfaces.web.OpenActivity">
 
             <intent-filter>
                 <data

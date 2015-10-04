@@ -20,6 +20,7 @@ import com.app.fevir.adapter.MenuListAdapter;
 import com.app.fevir.adapter.dto.MenuList;
 import com.app.fevir.movie.list.MovieListFragment;
 import com.app.fevir.util.picaso.AnalyticsUtil;
+import com.vikicast.app.R;
 
 import java.util.ArrayList;
 import java.util.List;

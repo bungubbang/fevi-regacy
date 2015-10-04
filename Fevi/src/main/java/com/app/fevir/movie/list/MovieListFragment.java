@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.app.fevir.R;
 import com.app.fevir.movie.detail.MovieDetailActivity;
 import com.app.fevir.movie.list.adapter.MovieListAdapter;
 import com.app.fevir.movie.list.component.DaggerMovieListComponent;
@@ -18,6 +17,7 @@ import com.app.fevir.movie.list.domain.Card;
 import com.app.fevir.movie.list.module.MovieListModule;
 import com.app.fevir.movie.list.presenter.MovieListPresenter;
 import com.app.fevir.util.picaso.AnalyticsUtil;
+import com.vikicast.app.R;
 
 import javax.inject.Inject;
 

@@ -10,8 +10,8 @@ android {
         applicationId "com.app.fevir"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 3
-        versionName "1.0.2"
+        versionCode 1
+        versionName "1.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

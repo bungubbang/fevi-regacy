@@ -5,8 +5,8 @@ import android.support.test.runner.AndroidJUnit4;
 import android.support.v4.app.FragmentManager;
 
 import com.app.fevir.MainActivity;
-import com.app.fevir.R;
 import com.app.fevir.movie.list.presenter.MovieListPresenter;
+import com.vikicast.app.R;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -33,7 +33,6 @@ public class MovieListFragmentTest {
 
     @Test
     public void testFragment() throws Exception {
-
 
 
     }

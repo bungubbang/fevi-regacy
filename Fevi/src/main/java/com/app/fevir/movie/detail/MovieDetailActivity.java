@@ -24,7 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.app.fevir.R;
 import com.app.fevir.movie.detail.di.DaggerMovieDetailComponent;
 import com.app.fevir.movie.detail.di.MovieDetailModule;
 import com.app.fevir.movie.detail.presenter.MovieDetailPresenter;
@@ -32,6 +31,7 @@ import com.app.fevir.movie.list.domain.Card;
 import com.app.fevir.util.picaso.AnalyticsUtil;
 import com.app.fevir.util.picaso.CircleTransform;
 import com.squareup.picasso.Picasso;
+import com.vikicast.app.R;
 
 import java.util.concurrent.TimeUnit;
 

@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.app.fevir.R;
 import com.app.fevir.adapter.dto.MenuList;
+import com.vikicast.app.R;
 
 import java.util.List;
 
