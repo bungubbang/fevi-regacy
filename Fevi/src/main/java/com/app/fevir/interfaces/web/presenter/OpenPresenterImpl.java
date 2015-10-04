@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import retrofit.Retrofit;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action0;
 import rx.functions.Action1;
 
 public class OpenPresenterImpl implements OpenPresenter {
@@ -24,7 +25,7 @@ public class OpenPresenterImpl implements OpenPresenter {
     }
 
     @Override
-    public void onInit(String lastPath, Action1<? super Card> subscribe) {
+    public void onInit(String lastPath, Action1<? super Card> subscribe, Action0 error) {
         if (openModel.containHashUrl(lastPath)) {
 
             retrofit.create(Cards.class)
@@ -32,7 +33,7 @@ public class OpenPresenterImpl implements OpenPresenter {
                     .flatMap(cardInfo -> Observable.from(cardInfo.getContent()))
                     .first()
                     .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(subscribe, Throwable::printStackTrace);
+                    .subscribe(subscribe, Throwable::printStackTrace, error);
 
         } else {
             view.showHome();

@@ -5,5 +5,5 @@
 * Picasso
 * OkHttp + Retrofit + Gson
 * RxJava + RxAndroid
-* ButterKnife
+* ButterKnife, Dagger
 * RetroLambda

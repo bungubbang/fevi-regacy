@@ -2,11 +2,12 @@ package com.app.fevir.interfaces.web.presenter;
 
 import com.app.fevir.movie.list.domain.Card;
 
+import rx.functions.Action0;
 import rx.functions.Action1;
 
 public interface OpenPresenter {
 
-    void onInit(String lastPath, Action1<? super Card> subscribe);
+    void onInit(String lastPath, Action1<? super Card> subscribe, Action0 error);
 
     interface View {
 

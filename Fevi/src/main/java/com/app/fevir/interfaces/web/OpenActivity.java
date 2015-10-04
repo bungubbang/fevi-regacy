@@ -10,6 +10,7 @@ import com.app.fevir.interfaces.web.di.OpenModule;
 import com.app.fevir.interfaces.web.presenter.OpenPresenter;
 import com.app.fevir.movie.detail.MovieDetailActivity;
 import com.app.fevir.movie.list.domain.Card;
+import com.app.fevir.util.picaso.AnalyticsUtil;
 
 import javax.inject.Inject;
 
@@ -36,7 +37,7 @@ public class OpenActivity extends AppCompatActivity implements OpenPresenter.Vie
 
         String lastPath = intent.getData().getFragment();
 
-        openPresenter.onInit(lastPath, this::showDetail);
+        openPresenter.onInit(lastPath, this::showDetail, this::showHome);
 
     }
 
@@ -55,6 +56,8 @@ public class OpenActivity extends AppCompatActivity implements OpenPresenter.Vie
 
         startActivities(new Intent[]{mainIntent, detailIntent});
 
+        AnalyticsUtil.sendEvent("open-link", "card", card.getId());
+
     }
 
     @Override
@@ -62,5 +65,8 @@ public class OpenActivity extends AppCompatActivity implements OpenPresenter.Vie
         Intent mainIntent = new Intent(OpenActivity.this, MainActivity.class);
         mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(mainIntent);
+
+        AnalyticsUtil.sendEvent("open-link", "home");
+
     }
 }

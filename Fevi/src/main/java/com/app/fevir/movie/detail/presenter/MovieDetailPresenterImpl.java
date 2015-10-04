@@ -25,7 +25,7 @@ public class MovieDetailPresenterImpl implements MovieDetailPresenter {
                 .append("/#")
                 .append(facebookId);
 
-        view.sendWebLink(buffer.toString());
+        view.shareWebLink(buffer.toString());
     }
 
     @Override
@@ -57,6 +57,6 @@ public class MovieDetailPresenterImpl implements MovieDetailPresenter {
                 .append("/#")
                 .append(id);
 
-        view.sendWeb(buffer.toString());
+        view.moveWeb(buffer.toString());
     }
 }

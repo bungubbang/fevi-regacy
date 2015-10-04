@@ -25,13 +25,12 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.app.fevir.R;
-import com.app.fevir.deligate.MyApplication;
 import com.app.fevir.movie.detail.di.DaggerMovieDetailComponent;
 import com.app.fevir.movie.detail.di.MovieDetailModule;
 import com.app.fevir.movie.detail.presenter.MovieDetailPresenter;
 import com.app.fevir.movie.list.domain.Card;
+import com.app.fevir.util.picaso.AnalyticsUtil;
 import com.app.fevir.util.picaso.CircleTransform;
-import com.google.android.gms.analytics.Tracker;
 import com.squareup.picasso.Picasso;
 
 import java.util.concurrent.TimeUnit;
@@ -86,10 +85,6 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
                 .build()
                 .inject(this);
 
-        Tracker tracker = ((MyApplication) getApplication()).getTracker();
-        tracker.setScreenName("VideoView");
-
-
         card = movieDetailPresenter.getCardFromIntent(getIntent());
 
         tvName.setText(card.getName());
@@ -122,12 +117,16 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
             if (getResources().getConfiguration().orientation != Configuration.ORIENTATION_PORTRAIT) {
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             }
+
+            AnalyticsUtil.sendEvent("video completed", "app", card.getId());
+
         });
 
         setupActionbar();
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        AnalyticsUtil.sendScreenName("VideoDetailView?id=" + card.getId());
     }
 
     @Override
@@ -243,6 +242,7 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
         // 미디어 인텐트 호출
         if (!landscape) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            AnalyticsUtil.sendEvent("full-screen", "app", card.getId());
         } else {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
@@ -251,17 +251,19 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
     }
 
     @Override
-    public void sendWebLink(String shareMsg) {
+    public void shareWebLink(String shareMsg) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, shareMsg);
         startActivity(Intent.createChooser(intent, getString(R.string.share)));
+        AnalyticsUtil.sendEvent("shareLink", "app", card.getId());
     }
 
     @Override
-    public void sendWeb(String url) {
+    public void moveWeb(String url) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         Intent chooser = Intent.createChooser(intent, getString(R.string.open_browser));
         startActivity(chooser);
+        AnalyticsUtil.sendEvent("moveWeb", "app", card.getId());
     }
 }

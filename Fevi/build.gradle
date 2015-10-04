@@ -12,6 +12,9 @@ android {
         targetSdkVersion 23
         versionCode 3
         versionName "1.0.2"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -23,6 +26,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
     }
 }
 
@@ -48,12 +55,14 @@ dependencies {
 
     compile 'com.google.android.gms:play-services:7.5.0'
     compile 'com.google.android.gms:play-services-analytics:7.5.0'
+
+    androidTestCompile "org.mockito:mockito-core:1.+"
+    androidTestCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support.test:runner:0.+'
+    androidTestCompile 'com.android.support.test:rules:0.+'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.+'
 }
 
 retrolambda {
-//    jdk java8home
-//    oldJdk java7home
     javaVersion JavaVersion.VERSION_1_7
-//    defaultMethods false
-//    incremental true
 }

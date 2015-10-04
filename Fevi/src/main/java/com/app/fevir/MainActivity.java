@@ -19,6 +19,7 @@ import android.widget.ListView;
 import com.app.fevir.adapter.MenuListAdapter;
 import com.app.fevir.adapter.dto.MenuList;
 import com.app.fevir.movie.list.MovieListFragment;
+import com.app.fevir.util.picaso.AnalyticsUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -146,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setItemChecked(position, true);
         setTitle(mPlanetTitles[position]);
         mDrawerLayout.closeDrawer(leftDrawer);
+
+        AnalyticsUtil.sendEvent("page", mPlanetTitles[position]);
     }
 
     @Override

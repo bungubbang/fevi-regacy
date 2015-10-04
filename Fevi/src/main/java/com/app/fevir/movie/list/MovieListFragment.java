@@ -17,6 +17,7 @@ import com.app.fevir.movie.list.component.DaggerMovieListComponent;
 import com.app.fevir.movie.list.domain.Card;
 import com.app.fevir.movie.list.module.MovieListModule;
 import com.app.fevir.movie.list.presenter.MovieListPresenter;
+import com.app.fevir.util.picaso.AnalyticsUtil;
 
 import javax.inject.Inject;
 
@@ -73,12 +74,19 @@ public class MovieListFragment extends Fragment implements MovieListPresenter.Vi
             intent.putExtra(MovieDetailActivity.CARD_ID, card.getId());
 
             startActivity(intent);
+
+            AnalyticsUtil.sendEvent("card-reveal", "whole", card.getId());
         });
         itemListView.setLayoutManager(new LinearLayoutManager(getActivity()));
         itemListView.setAdapter(movieListAdapter);
-        itemListView.addOnScrollListener(new EndlessScrollListener(5, () -> movieListPresenter.onLoadInfo(menu_title)));
+        itemListView.addOnScrollListener(new EndlessScrollListener(5, () -> {
+            movieListPresenter.onLoadInfo(menu_title);
+            AnalyticsUtil.sendEvent("more-load", menu_title, String.valueOf(movieListAdapter.getItemCount()));
+        }));
 
         movieListPresenter.onLoadInfo(menu_title);
+
+        AnalyticsUtil.sendScreenName("VideoList?page=" + menu_title);
     }
 
     @Override
