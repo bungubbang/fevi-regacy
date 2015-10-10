@@ -37,7 +37,7 @@ public class OpenActivity extends AppCompatActivity implements OpenPresenter.Vie
 
         String lastPath = intent.getData().getFragment();
 
-        openPresenter.onInit(lastPath, this::showDetail, this::showHome);
+        openPresenter.onInit(lastPath, this::showDetail, throwable -> showHome());
 
     }
 
@@ -58,6 +58,8 @@ public class OpenActivity extends AppCompatActivity implements OpenPresenter.Vie
 
         AnalyticsUtil.sendEvent("open-link", "card", card.getId());
 
+        finish();
+
     }
 
     @Override
@@ -68,5 +70,6 @@ public class OpenActivity extends AppCompatActivity implements OpenPresenter.Vie
 
         AnalyticsUtil.sendEvent("open-link", "home");
 
+        finish();
     }
 }
