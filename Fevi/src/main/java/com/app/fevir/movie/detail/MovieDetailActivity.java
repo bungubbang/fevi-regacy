@@ -30,6 +30,8 @@ import com.app.fevir.movie.detail.presenter.MovieDetailPresenter;
 import com.app.fevir.movie.list.domain.Card;
 import com.app.fevir.util.picaso.AnalyticsUtil;
 import com.app.fevir.util.picaso.CircleTransform;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.squareup.picasso.Picasso;
 import com.vikicast.app.R;
 
@@ -53,6 +55,7 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
     public static final String CARD_DESCRIPTION = "CARD_DESCRIPTION";
     public static final String CARD_SOURCE = "CARD_SOURCE";
     public static final String CARD_ID = "CARD_ID";
+    public static final String ADMOB_TEST_DEVICE_ID = "5E345898F87BB3FE34B6E61D9DB28D4F";
 
     @Bind(R.id.profile_layout)
     View vgTitle;
@@ -68,6 +71,9 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
     VideoView videoView;
     @Bind(R.id.progressBar)
     ProgressBar progressBar;
+
+    @Bind(R.id.ad_movie_detail)
+    AdView adView;
     @Inject
     MovieDetailPresenter movieDetailPresenter;
     private Card card;
@@ -123,10 +129,19 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
         });
 
         setupActionbar();
+        setUpAdView();
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         AnalyticsUtil.sendScreenName("VideoDetailView?id=" + card.getId());
+    }
+
+    private void setUpAdView() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(ADMOB_TEST_DEVICE_ID)
+                .build();
+        adView.loadAd(adRequest);
+
     }
 
     @Override
