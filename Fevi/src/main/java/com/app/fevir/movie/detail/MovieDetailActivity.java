@@ -141,7 +141,24 @@ public class MovieDetailActivity extends AppCompatActivity implements MovieDetai
                 .addTestDevice(ADMOB_TEST_DEVICE_ID)
                 .build();
         adView.loadAd(adRequest);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adView.resume();
+    }
+
+    @Override
+    protected void onPause() {
+        adView.pause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        adView.destroy();
+        super.onDestroy();
     }
 
     @Override
