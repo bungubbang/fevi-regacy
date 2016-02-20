@@ -32,6 +32,52 @@
             android:layout_gravity="start"
             android:orientation="vertical">
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/menuwall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/menu_default_wall" />
+
+                <TextView
+                    android:id="@+id/fadong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/left_name"
+                    android:layout_alignLeft="@+id/left_name"
+                    android:layout_alignStart="@+id/left_name"
+                    android:text="@string/app_name"
+                    android:textColor="#F3FFE2"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/left_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/left_mail"
+                    android:layout_alignLeft="@+id/left_mail"
+                    android:layout_alignStart="@+id/left_mail"
+                    android:textColor="#F3FFE2"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/left_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#F3FFE2"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
             <ListView
                 android:id="@+id/left_drawer_list"
                 android:layout_width="match_parent"

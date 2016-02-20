@@ -25,19 +25,19 @@ public class MovieDetailPresenterImpl implements MovieDetailPresenter {
                 .append("/#")
                 .append(facebookId);
 
-        view.shareWebLink(buffer.toString());
+        view.sendFacebookLink(buffer.toString());
     }
 
     @Override
     public Card getCardFromIntent(Intent intent) {
 
-        String cardName = intent.getStringExtra(MovieDetailActivity.CARD_NAME);
-        String cardTime = intent.getStringExtra(MovieDetailActivity.CARD_TIME);
-        String cardProfile = intent.getStringExtra(MovieDetailActivity.CARD_PROFILE);
-        String cardPicture = intent.getStringExtra(MovieDetailActivity.CARD_PICTURE);
-        String cardDescription = intent.getStringExtra(MovieDetailActivity.CARD_DESCRIPTION);
-        String cardSource = intent.getStringExtra(MovieDetailActivity.CARD_SOURCE);
-        String cardId = intent.getStringExtra(MovieDetailActivity.CARD_ID);
+        String cardName = intent.getStringExtra(MovieDetailActivity.Companion.getCARD_NAME());
+        String cardTime = intent.getStringExtra(MovieDetailActivity.Companion.getCARD_TIME());
+        String cardProfile = intent.getStringExtra(MovieDetailActivity.Companion.getCARD_PROFILE());
+        String cardPicture = intent.getStringExtra(MovieDetailActivity.Companion.getCARD_PICTURE());
+        String cardDescription = intent.getStringExtra(MovieDetailActivity.Companion.getCARD_DESCRIPTION());
+        String cardSource = intent.getStringExtra(MovieDetailActivity.Companion.getCARD_SOURCE());
+        String cardId = intent.getStringExtra(MovieDetailActivity.Companion.getCARD_ID());
 
         return new Card.Builder()
                 .id(cardId)
@@ -57,6 +57,6 @@ public class MovieDetailPresenterImpl implements MovieDetailPresenter {
                 .append("/#")
                 .append(id);
 
-        view.moveWeb(buffer.toString());
+        view.sendWeb(buffer.toString());
     }
 }

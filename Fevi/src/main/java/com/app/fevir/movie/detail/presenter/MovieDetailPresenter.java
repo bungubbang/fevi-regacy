@@ -14,8 +14,8 @@ public interface MovieDetailPresenter {
 
     interface View {
 
-        void shareWebLink(String shareMsg);
+        void sendFacebookLink(String shareMsg);
 
-        void moveWeb(String url);
+        void sendWeb(String url);
     }
 }

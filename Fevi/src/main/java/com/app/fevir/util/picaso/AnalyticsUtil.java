@@ -11,7 +11,7 @@ import java.util.Map;
 public class AnalyticsUtil {
 
     public static void sendScreenName(String screenName) {
-        Tracker tracker = MyApplication.getContext().getTracker();
+        Tracker tracker = MyApplication.Companion.getContext().getTracker();
         tracker.setScreenName(screenName);
 
         tracker.send(new HitBuilders.AppViewBuilder().build());
@@ -26,7 +26,7 @@ public class AnalyticsUtil {
     }
 
     public static void sendEvent(String category, String action, String label) {
-        Tracker tracker = MyApplication.getContext().getTracker();
+        Tracker tracker = MyApplication.Companion.getContext().getTracker();
         HitBuilders.EventBuilder eventBuilder = new HitBuilders.EventBuilder();
         if (!TextUtils.isEmpty(category)) {
             eventBuilder.setCategory(category);
